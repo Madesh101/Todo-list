@@ -1,4 +1,4 @@
-// ── State ──────────────────────────────────────────────────────
+
 let todos = [
     { id: uid(), name: 'Luffy wakeup', dueDate: '2025-12-22', priority: 'high',   done: false },
     { id: uid(), name: 'Zoro wakeup',  dueDate: '2025-12-22', priority: 'medium', done: false },
@@ -6,7 +6,7 @@ let todos = [
 
 let filter = 'all';
 
-// ── Helpers ────────────────────────────────────────────────────
+
 function uid() {
     return Date.now().toString(36) + Math.random().toString(36).slice(2);
 }
@@ -33,7 +33,7 @@ function esc(s) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-// ── Render ─────────────────────────────────────────────────────
+
 function render() {
     const visible = todos.filter(t => {
         if (filter === 'active')  return !t.done;
@@ -93,7 +93,7 @@ function itemHTML(t) {
     </div>`;
 }
 
-// ── Actions ────────────────────────────────────────────────────
+
 function addTodo() {
     const nameEl = document.querySelector('.js-name-input');
     const dateEl = document.querySelector('.js-date-input');
@@ -125,7 +125,7 @@ function remove(id) {
     render();
 }
 
-// ── Event Listeners ────────────────────────────────────────────
+
 document.querySelectorAll('.js-filter').forEach(btn =>
     btn.addEventListener('click', () => {
         document.querySelectorAll('.js-filter').forEach(b => b.classList.remove('active'));
@@ -146,5 +146,5 @@ document.querySelector('.js-name-input').addEventListener('keydown', e => {
     if (e.key === 'Enter') addTodo();
 });
 
-// ── Init ───────────────────────────────────────────────────────
+
 render();

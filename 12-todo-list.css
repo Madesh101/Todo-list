@@ -26,7 +26,7 @@ body {
 
 .app-wrapper { max-width: 640px; margin: 0 auto; }
 
-/* ── Header ─────────────────────────────────────────── */
+
 .app-header { margin-bottom: 28px; }
 
 .app-title {
@@ -50,7 +50,7 @@ body {
 .stats-chip.done-chip { background: var(--accent-light); color: var(--accent); }
 .stats-chip.over-chip { background: var(--danger-light); color: var(--danger); }
 
-/* ── Input Card ─────────────────────────────────────── */
+
 .input-card {
     background: var(--surface);
     border: 1.5px solid var(--border);
@@ -110,7 +110,7 @@ input[type="text"]::placeholder { color: var(--text-muted); }
 .btn-add:hover  { background: #235c40; }
 .btn-add:active { transform: scale(0.97); }
 
-/* ── Filter Bar ─────────────────────────────────────── */
+
 .filter-bar {
     display: flex;
     gap: 6px;
@@ -149,10 +149,8 @@ input[type="text"]::placeholder { color: var(--text-muted); }
 }
 .btn-clear:hover { background: var(--danger-light); }
 
-/* ── Todo List ──────────────────────────────────────── */
 .todo-list { display: flex; flex-direction: column; gap: 8px; }
 
-/* ── Todo Item ──────────────────────────────────────── */
 .todo-item {
     background: var(--surface);
     border: 1.5px solid var(--border);
@@ -242,7 +240,7 @@ input[type="text"]::placeholder { color: var(--text-muted); }
 .todo-item:hover .btn-delete { opacity: 1; }
 .btn-delete:hover { background: var(--danger-light); color: var(--danger); }
 
-/* ── Empty State ────────────────────────────────────── */
+
 .empty-state { text-align: center; padding: 64px 0; color: var(--text-muted); }
 
 .empty-icon {
