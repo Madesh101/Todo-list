@@ -1,20 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Todo List</title>
-        <link rel="stylesheet" href="styles/12-todo-list.css">
-    </head>
-        <body>
-           
-            <p>Todo List</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="12-todo-list.css">
+</head>
+<body>
+<div class="app-wrapper">
 
-             <div class="todo-input-gird">
-            <input placeholder="Todo name" class="js-name-input name-input">
-            <input type="date" class="js-due-date-input due-date-input">
-            <button class="todo-add js-todo-button">Add</button>
-            </div>
+    <header class="app-header">
+        <h1 class="app-title">My Tasks</h1>
+        <div class="stats-bar">
+            <span class="js-stats-total stats-chip">0 total</span>
+            <span class="js-stats-done  stats-chip done-chip">0 done</span>
+            <span class="js-stats-over  stats-chip over-chip">0 overdue</span>
+        </div>
+    </header>
 
-            <div class="js-todo-list todo-grid" ></div>
-           <script src="scripts/12-todo-list.js"></script>
-        </body>
+    <div class="input-card">
+        <input type="text" placeholder="What needs to be done?" class="js-name-input name-input" maxlength="80">
+        <input type="date" class="js-date-input">
+        <select class="js-priority-input">
+            <option value="medium">⚡ Medium</option>
+            <option value="high">🔴 High</option>
+            <option value="low">🟢 Low</option>
+        </select>
+        <button class="btn-add js-add-btn">+ Add</button>
+    </div>
+
+    <div class="filter-bar">
+        <button class="filter-btn active js-filter" data-filter="all">All</button>
+        <button class="filter-btn js-filter" data-filter="active">Active</button>
+        <button class="filter-btn js-filter" data-filter="done">Done</button>
+        <button class="filter-btn js-filter" data-filter="overdue">Overdue</button>
+        <button class="btn-clear js-clear-done">Clear Done</button>
+    </div>
+
+    <div class="js-todo-list todo-list"></div>
+
+    <div class="js-empty empty-state hidden">
+        <div class="empty-icon">✓</div>
+        <p>Nothing here. Add a task above!</p>
+    </div>
+
+</div>
+<script src="12-todo-list.js"></script>
+</body>
 </html>
